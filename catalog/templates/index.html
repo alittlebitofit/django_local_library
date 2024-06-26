@@ -17,4 +17,8 @@
 		<li><strong>Genres with "sci":</strong> {{ num_genres_contains_sci }}</li>
         <li><strong>Authors with "the":</strong> {{ num_books_contains_the }}</li>
 	</ul>
+
+	<p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}</p>
+
+
 {% endblock %}
