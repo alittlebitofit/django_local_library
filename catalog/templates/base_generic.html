@@ -24,7 +24,11 @@
 						   {% if user.is_authenticated %}
 							 <li>User: {{ user.get_username }}</li>
 
-							 <li><a href="{% url 'my-borrowed' %}">My borrowed</a></li>
+							 {% if perms.catalog.can_mark_returned %}
+							 	<li><a href="{% url 'borrowed' %}">All borrowed</a></li>
+							 {% else %}
+							 	<li><a href="{% url 'my-borrowed' %}">My borrowed</a></li>
+							 {% endif %}
 
 							 <li>
 							   <form id="logout-form" method="post" action="{% url 'logout' %}">
