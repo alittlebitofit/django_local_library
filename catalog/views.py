@@ -113,7 +113,7 @@ def renew_book_librarian(request, pk):
 
 			# redirect to a new URL:
 			return HttpResponseRedirect(reverse('borrowed'))
-		
+
 	# If this is GET (or any other method) create the default form.
 	else:
 		proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
