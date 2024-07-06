@@ -116,7 +116,7 @@ class BookInstance(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.id} ({self.book.title})'
-    
+
     @property
     def is_overdue(self):
         """Determines if the book is overdue based on due date and current date."""
@@ -155,11 +155,11 @@ class Language(models.Model):
     def get_absolute_url(self):
         """Returns the url to access a particular language instance."""
         return reverse("language-detail", args=[self.pk])
-    
+
     def __str__(self):
         """String for representing the Model object (in Admin site etc.)"""
         return self.name
-    
+
 
     class Meta:
         constraints = [
