@@ -160,6 +160,6 @@ if 'DATABASE_URL' in os.environ:
 STORAGES = {
 	# ...
 	"staticfiles": {
-		"BACKEND": "whitenoise.storage.CompressManifestStaticFilesStorage",
+		"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
 	}
 }
